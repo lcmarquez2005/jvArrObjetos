@@ -106,12 +106,18 @@ public class Persona {
     }
 
     // @Override
-    public void mostrarPersona() {
-        // String resultado = "";
-        mensajes = ("Nombre: " + nombre+"\n");
-        mensajes =( "Edad: " + edad +"\n");
-        mensajes = ( "Estatura: " + estatura +"\n");
-        mensajes = ( "Peso: " + peso +"\n");
-        mensajes = ( "IMC: " + imc +"\n");
+    public String mostrarPersona() {
+        String resultado = "";
+        resultado += ("Nombre: " + nombre+"\n");
+        resultado +=( "Edad: " + edad +"\n");
+        resultado  += ( "Estatura: " + estatura +"\n");
+        resultado += ( "Peso: " + peso +"\n");
+        resultado += ( "IMC: " + imc +"\n");
+        resultado += ( "Estatus: " + status +"\n");
+        return resultado;
     }
+    public void borrar() {
+         
+    }
+
 }
