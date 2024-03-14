@@ -109,15 +109,13 @@ public class Persona {
     public String mostrarPersona() {
         String resultado = "";
         resultado += ("Nombre: " + nombre+"\n");
-        resultado +=( "Edad: " + edad +"\n");
-        resultado  += ( "Estatura: " + estatura +"\n");
-        resultado += ( "Peso: " + peso +"\n");
+        resultado +=( "Edad: " + edad +" años\n");
+        resultado  += ( "Estatura: " + estatura +" m\n");
+        resultado += ( "Peso: " + peso +" kg\n");
         resultado += ( "IMC: " + imc +"\n");
         resultado += ( "Estatus: " + status +"\n");
         return resultado;
     }
-    public void borrar() {
-         
-    }
+
 
 }

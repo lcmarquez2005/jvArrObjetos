@@ -17,7 +17,7 @@ public class JvArrObjetos {
      */
     public static void main(String[] args) {
         
-        jfrmInterfaz v1 = new jfrmInterfaz();
+        jfrmPersona v1 = new jfrmPersona();
         v1.setVisible(true);
 //        int numPersonas = num;
 //        
@@ -34,9 +34,9 @@ public class JvArrObjetos {
         
     }
     
-    public void insertar(int id, String nombre, int edad, double estatura, double peso ) {
-        
-        personas[id] = new Persona(nombre, edad, estatura, peso);
-    }
+//    public void insertar(int id, String nombre, int edad, double estatura, double peso ) {
+//        
+//        personas[id] = new Persona(nombre, edad, estatura, peso);
+//    }
     
 }

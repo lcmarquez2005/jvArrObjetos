@@ -8,7 +8,7 @@ package jvarrobjetos;
  *
  * @author lcarl
  */
-public class jfrmInterfaz extends javax.swing.JFrame {
+public class jfrmPersona extends javax.swing.JFrame {
     public Persona[] personas;
     public int numero;
     public String nombre;
@@ -18,7 +18,7 @@ public class jfrmInterfaz extends javax.swing.JFrame {
     /**
      * Creates new form jfrmInterfaz
      */
-    public jfrmInterfaz() {
+    public jfrmPersona() {
         initComponents();
     }
 
@@ -50,16 +50,17 @@ public class jfrmInterfaz extends javax.swing.JFrame {
         jbtnMostrar = new javax.swing.JButton();
         jbtnModify = new javax.swing.JButton();
         jbtnCrear = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        inEdad.setText("Edad");
-
-        inNombre.setText("Nombre");
-
         jLabel1.setText("Cuantas Personas quieres ingresar: ");
 
-        jLabel2.setText("Persona:");
+        jLabel2.setText("Ingresa Persona:");
 
         jbtnDelete.setText("Borrar");
         jbtnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -75,18 +76,12 @@ public class jfrmInterfaz extends javax.swing.JFrame {
             }
         });
 
-        inEstatura.setText("Estatura");
-
-        inPeso.setText("Peso");
-
         jbtnSearch.setText("Buscar");
         jbtnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnSearchActionPerformed(evt);
             }
         });
-
-        inNumero.setText("Numero");
 
         jLabel5.setText("Arreglo de Objetos");
 
@@ -118,6 +113,16 @@ public class jfrmInterfaz extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setText("Numero");
+
+        jLabel4.setText("Nombre");
+
+        jLabel7.setText("Edad");
+
+        jLabel8.setText("Estatura");
+
+        jLabel9.setText("Peso");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -138,19 +143,30 @@ public class jfrmInterfaz extends javax.swing.JFrame {
                         .addComponent(jlblMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(inNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel3)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(inNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(inNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(inNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(inEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(inEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel7))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(inEstatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(inEstatura, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel8))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(inPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel9)
+                                    .addComponent(inPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -181,7 +197,14 @@ public class jfrmInterfaz extends javax.swing.JFrame {
                             .addComponent(jLabel1)
                             .addComponent(jbtnCrear)))
                     .addComponent(jlblMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9))
+                .addGap(1, 1, 1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(inNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(inEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -199,7 +222,7 @@ public class jfrmInterfaz extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 56, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addGap(28, 28, 28)
@@ -251,26 +274,27 @@ public class jfrmInterfaz extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(jfrmInterfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfrmPersona.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(jfrmInterfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfrmPersona.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(jfrmInterfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfrmPersona.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(jfrmInterfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfrmPersona.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new jfrmInterfaz().setVisible(true);
+                new jfrmPersona().setVisible(true);
             }
         });
     }
     
     public void getInfo() {
-        numero = Integer.parseInt(inNumero.getText()) -1;
+        numero = Integer.parseInt( (inNumero.getText().equals("Numero")) ? "0": inNumero.getText());
         nombre = (inNombre.getText().equals("Nombre")) ? "": inNombre.getText() ;
         edad = Integer.parseInt((inEdad.getText().equals( "Edad")) ? "0": inEdad.getText());
         peso = Double.parseDouble((inPeso.getText().equals("Peso")) ? "0" : inPeso.getText());
@@ -278,9 +302,16 @@ public class jfrmInterfaz extends javax.swing.JFrame {
     }
 
     public void crear() {
-        int num = Integer.parseInt(numPersonas.getText());
-        personas = new Persona[num];
-        jlblMensaje.setText("arreglo de personas creado correctamente");
+        
+        if(!numPersonas.getText().equals("")) {
+            int num = Integer.parseInt(numPersonas.getText());
+
+            personas = new Persona[num];
+            jlblMensaje.setText("arreglo de personas creado correctamente");
+        } else {
+            
+            jlblMensaje.setText("ingresa un numero entero");
+        }
     }
 //    public void mostrar() {
 //        for(int i = 0; i<personas.length; i++) {
@@ -291,6 +322,8 @@ public class jfrmInterfaz extends javax.swing.JFrame {
 //    }
     public void mostrar() {
         String mensaje = "";
+        
+        mensaje +=("Hay " + (personas.length) + " personas\n\n");
         for (int i = 0; i<personas.length; i++) {
             if(personas[i] == null){
                 
@@ -307,7 +340,7 @@ public class jfrmInterfaz extends javax.swing.JFrame {
         getInfo();
         if(personas[numero] == null) {
             
-            personas[numero] = new Persona(nombre,edad,peso,estatura);
+            personas[numero] = new Persona(nombre,edad, estatura, peso);
             jtxtMensajes.setText("la persona se ha creado correctamente");
         } else {
             jtxtMensajes.setText("la posicion ya esta llena");
@@ -325,7 +358,7 @@ public class jfrmInterfaz extends javax.swing.JFrame {
     public void borrar() {
         getInfo();
         if(personas[numero] !=null ) {
-            personas[numero] = null;
+            personas[numero] = null; 
             jtxtMensajes.setText("la persona numero " + (numero+1) +" se ha eliminado");
         } else {
             jtxtMensajes.setText("la persona ya esta vacia");
@@ -355,7 +388,7 @@ public class jfrmInterfaz extends javax.swing.JFrame {
                 mostrar();
             }
         } else {
-            jlblMensaje.setText("No se ha creado un arreglo aun");
+            jtxtMensajes.setText("No se ha creado un arreglo aun");
         }
     }
     
@@ -367,8 +400,13 @@ public class jfrmInterfaz extends javax.swing.JFrame {
     private javax.swing.JTextField inPeso;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton jbtnCrear;
     private javax.swing.JButton jbtnDelete;
