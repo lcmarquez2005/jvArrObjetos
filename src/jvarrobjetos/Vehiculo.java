@@ -19,8 +19,8 @@ public class Vehiculo {
      * @param marca
      * @param modelo
      * @param tipo
-     * @param kilometraje
-     * @param tipoMotor
+     * @param km
+     * @param tipo
      */
     public Vehiculo(String marca, String modelo, int km, String tipo) {
         this.marca = marca;

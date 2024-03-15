@@ -4,8 +4,6 @@
  */
 package jvarrobjetos;
 
-import java.util.Scanner;
-
 /**
  *
  * @author lcarl
@@ -21,11 +19,6 @@ public class JvArrObjetos {
         jfrmVehiculo v2 = new jfrmVehiculo();
 //        v1.setVisible(true);
         v2.setVisible(true);
-//        int numPersonas = num;
-//        
-//         Persona[] personas= new Persona[numPersonas];
-
-
             /*Asignacion estatica: incializar a vacio
              * Insertar : insertar uno  solo
              * borrar 
@@ -34,11 +27,5 @@ public class JvArrObjetos {
              * buscar (por caracteristica)
              */
         
-    }
-    
-//    public void insertar(int id, String nombre, int edad, double estatura, double peso ) {
-//        
-//        personas[id] = new Persona(nombre, edad, estatura, peso);
-//    }
-    
+    }   
 }
