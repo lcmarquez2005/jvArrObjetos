@@ -17,8 +17,10 @@ public class JvArrObjetos {
      */
     public static void main(String[] args) {
         
-        jfrmPersona v1 = new jfrmPersona();
-        v1.setVisible(true);
+//        jfrmPersona v1 = new jfrmPersona();        
+        jfrmVehiculo v2 = new jfrmVehiculo();
+//        v1.setVisible(true);
+        v2.setVisible(true);
 //        int numPersonas = num;
 //        
 //         Persona[] personas= new Persona[numPersonas];

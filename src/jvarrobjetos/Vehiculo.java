@@ -9,47 +9,44 @@ package jvarrobjetos;
  * @author lcarl
  */
 public class Vehiculo {
-    private String nombre;
+    private String marca;
     private String modelo;
     private String tipo;
-    private int kilometraje;
-    private String tipoMotor;
+    private int km;
     private String status;
     
     /**
-     * @param nombre
+     * @param marca
      * @param modelo
      * @param tipo
      * @param kilometraje
      * @param tipoMotor
      */
-    public Vehiculo(String nombre, String modelo, String tipo, int kilometraje, String tipoMotor) {
-        this.nombre = nombre;
+    public Vehiculo(String marca, String modelo, int km, String tipo) {
+        this.marca = marca;
         this.modelo = modelo;
         this.tipo = tipo;
-        this.kilometraje = kilometraje;
-        this.tipoMotor = tipoMotor;
+        this.km = km;
         calcStatus();
     }
     
     public Vehiculo() {
-        this.nombre = "";
+        this.marca = "";
         this.modelo = "";
         this.tipo = "";
-        this.kilometraje = 0;
-        this.tipoMotor = "";
+        this.km = 0;
     }
     /**
-     * @return the nombre
+     * @return the marca
      */
-    public String getNombre() {
-        return nombre;
+    public String getMarca() {
+        return marca;
     }
     /**
-     * @param nombre the nombre to set
+     * @param nombre the marca to set
      */
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setMarca(String nombre) {
+        this.marca = nombre;
     }
     /**
      * @return the modelo
@@ -84,31 +81,17 @@ public class Vehiculo {
         this.tipo = tipo;
     }
     /**
-     * @return the kilometraje
+     * @return the km
      */
-    public int getKilometraje() {
-        return kilometraje;
+    public int getKm() {
+        return km;
     }
     /**
-     * @param kilometraje the kilometraje to set
+     * @param km the km to set
      */
-    public void setKilometraje(int kilometraje) {
-        this.kilometraje = kilometraje;
+    public void setKm(int km) {
+        this.km = km;
     }
-    /**
-     * @return the tipoMotor
-     */
-    public String getTipoMotor() {
-        return tipoMotor;
-    }
-    /**
-     * @param tipoMotor the tipoMotor to set
-     */
-    public void setTipoMotor(String tipoMotor) {
-        this.tipoMotor = tipoMotor;
-    }
-
-
 
 
     public void apagar() {
@@ -125,30 +108,35 @@ public class Vehiculo {
     }
 
     public void calcStatus() {
-        
+        if(this.getKm() < 0) {
+            this.setStatus("Kilometraje invalido");
+        } else if(km <50000) {
+            this.setStatus("El Auto es Nuevo");
+        } else if(km<100000){
+            this.setStatus("El Auto tiene medio Uso");
+            
+        } else if(km<200000){
+            this.setStatus("El Auto es Viejo");
+        } else {
+            this.setStatus("El auto es Chatarra");
+        }
     }
 
     public String mostrarVehiculo() {
         String resultado = "";
-        resultado += ("Nombre: " + nombre+"\n");
+        resultado += ("Marca: " + marca+"\n");
         resultado +=( "El modelo es: " + modelo +"\n");
         resultado  += ( "Es de tipo: " + tipo +"\n");
-        resultado += ( "Tiene un kilometraje de: " + kilometraje +"\n");
+        resultado += ( "Tiene un kilometraje de: " + km +"\n");
         resultado += ( "Estatus: " + status +"\n");
         return resultado;
     }
     public void borrar() {
-        this.nombre = "";
-        this.modelo = "";
-        this.tipo = "";
-        this.kilometraje = 0;
-        this.tipoMotor = "";
+        this.setMarca("");
+        this.setModelo("");
+        this.setKm(0);
+        this.setTipo("");
+        this.setStatus("");
     }
-
-    
-
-
-    
-
     
 }
