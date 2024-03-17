@@ -15,10 +15,10 @@ public class JvArrObjetos {
      */
     public static void main(String[] args) {
         
-//        jfrmPersona v1 = new jfrmPersona();        
-        jfrmVehiculo v2 = new jfrmVehiculo();
-//        v1.setVisible(true);
-        v2.setVisible(true);
+//       jfrmPersona v1 = new jfrmPersona();        
+         jfrmVehiculo v2 = new jfrmVehiculo();
+//       v1.setVisible(true);
+         v2.setVisible(true);
             /*Asignacion estatica: incializar a vacio
              * Insertar : insertar uno  solo
              * borrar 

@@ -319,6 +319,7 @@ public class jfrmVehiculo extends javax.swing.JFrame {
     
     public void getInfo() {
         numero = Integer.parseInt( (inNumero.getText().equals("")) ? "0": inNumero.getText());
+        numero--;
         marca = inMarca.getText() ;
         modelo = inModelo.getText() ;
         tipo = inTipo.getText();
@@ -365,6 +366,7 @@ public class jfrmVehiculo extends javax.swing.JFrame {
             
             vehiculos[numero] = new Vehiculo(marca,modelo,km,tipo);
             jtxtMensajes.setText("el vehiculo se ha creado correctamente");
+            System.out.println(numero);
         } else {
             jtxtMensajes.setText("la posicion ya esta llena");
         }
